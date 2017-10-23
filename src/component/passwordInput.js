@@ -1,13 +1,18 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/dist/MaterialIcons';
-import {View, StyleSheet} from 'react-native';
-import {TextField} from 'react-native-material-textfield';
+import {
+    View, 
+    StyleSheet
+} from 'react-native';
+import {
+    TextField
+} from 'react-native-material-textfield';
 
 export default class PasswordInputText extends React.Component {
 
     constructor(props) {
         super(props);
-
+        
         this.state = {
             icEye: 'visibility-off',
             password: true
@@ -15,17 +20,21 @@ export default class PasswordInputText extends React.Component {
     }
 
     changePwdType = () => {
+        let newState;
         if (this.state.password) {
-            this.setState({
+            newState = {
                 icEye: 'visibility',
                 password: false
-            });
+            }
         } else {
-            this.setState({
+            newState = {
                 icEye: 'visibility-off',
                 password: true
-            });
+            }
         }
+
+        // set new state value
+        this.setState({newState})
 
     };
 
