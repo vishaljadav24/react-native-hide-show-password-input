@@ -1,5 +1,9 @@
-import React, {Component} from 'react';
-import {View} from 'react-native';
+import React, {
+    Component
+} from 'react';
+import {
+    View
+} from 'react-native';
 import PasswordInputText from "./passwordInput";
 
 export default class App extends Component {
