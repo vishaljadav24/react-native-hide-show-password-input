@@ -26,7 +26,7 @@ Very simple to use just add this component in your file.
 // import packages
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import PasswordInputText from "passwordInput";
+import PasswordInputText from 'react-native-hide-show-password-input';
 
 
 // use in your class
