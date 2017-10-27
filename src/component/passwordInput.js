@@ -34,7 +34,7 @@ export default class PasswordInputText extends React.Component {
         }
 
         // set new state value
-        this.setState({newState})
+        this.setState(newState)
 
     };
 
