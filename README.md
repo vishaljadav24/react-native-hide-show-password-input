@@ -31,10 +31,19 @@ import PasswordInputText from 'react-native-hide-show-password-input';
 
 // use in your class
 export default class App extends Component {
+    state = {
+        password: '',
+    };
+    
     render() {
+        let { password } = this.state;
+
         return (
             <View style={{margin: 20}}>
-                <PasswordInputText/>
+                <PasswordInputText
+                    value={password}
+                    onChangeText={ (password) => this.setState({ password }) }
+                />
             </View>
         );
     }
