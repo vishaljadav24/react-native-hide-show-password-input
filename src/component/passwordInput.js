@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from 'react-native-vector-icons/dist/MaterialIcons';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import {
     View, 
     StyleSheet
