@@ -34,14 +34,12 @@ export default class App extends Component {
     state = {
         password: '',
     };
-    
-    render() {
-        let { password } = this.state;
 
+    render() {
         return (
             <View style={{margin: 20}}>
                 <PasswordInputText
-                    value={password}
+                    value={this.state.password}
                     onChangeText={ (password) => this.setState({ password }) }
                 />
             </View>
