@@ -47,7 +47,8 @@ export default class PasswordInputText extends React.Component {
                            label="Password"/>
                 <Icon style={styles.icon}
                       name={this.state.icEye}
-                      size={25}
+                      size={this.props.iconSize}
+                      color={this.props.iconColor}
                       onPress={this.changePwdType}
                 />
             </View>
@@ -65,3 +66,8 @@ export const styles = StyleSheet.create({
     }
 
 });
+
+PasswordInputText.defaultProps = {
+iconSize:25,
+}
+    
