@@ -15,7 +15,8 @@ export default class PasswordInputText extends React.Component {
         
         this.state = {
             icEye: 'visibility-off',
-            password: true
+            password: true,
+            label: props.label
         }
     }
 
@@ -44,7 +45,7 @@ export default class PasswordInputText extends React.Component {
             <View>
                 <TextField {...this.props}
                            secureTextEntry={this.state.password}
-                           label="Password"/>
+                           label={this.state.label}/>
                 <Icon style={styles.icon}
                       name={this.state.icEye}
                       size={this.props.iconSize}
@@ -69,5 +70,6 @@ export const styles = StyleSheet.create({
 
 PasswordInputText.defaultProps = {
 iconSize:25,
+label: 'Password',
 }
     
