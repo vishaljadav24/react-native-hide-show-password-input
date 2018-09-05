@@ -47,3 +47,33 @@ export default class App extends Component {
     }
 }
 ```
+
+To focus the text input automatically, you can pass a textFieldRef property
+```js
+export default class App extends Component {
+    state = {
+        password: '',
+    };
+
+    setTextFieldRef = (ref) => {
+      this.passwordInputRef = ref.input
+    }
+
+    focusPasswordInput = () => {
+      this.passwordInputRef.focus()
+    }
+
+    render() {
+        return (
+            <View style={{margin: 20}}>
+                <PasswordInputText
+                    value={this.state.password}
+                    onChangeText={ (password) => this.setState({ password }) }
+                    textFieldRef={this.setTextFieldRef}
+                />
+            </View>
+        );
+    }
+}
+
+```
