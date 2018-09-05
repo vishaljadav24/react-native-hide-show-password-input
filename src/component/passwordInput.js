@@ -40,11 +40,12 @@ export default class PasswordInputText extends React.Component {
 
 
     render() {
+        const { textFieldRef } = this.props
         return (
             <View>
                 <TextField {...this.props}
                            secureTextEntry={this.state.password}
-                           ref={(input) => { this.textFieldRef = input }}/>
+                           ref={textFieldRef}/>
                 <Icon style={styles.icon}
                       name={this.state.icEye}
                       size={this.props.iconSize}
