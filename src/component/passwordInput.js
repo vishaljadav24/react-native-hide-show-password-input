@@ -70,5 +70,5 @@ export const styles = StyleSheet.create({
 
 PasswordInputText.defaultProps = {
 iconSize:25,
-label: 'Password'
+label: 'Password',
 }
