@@ -1,14 +1,9 @@
 import React from 'react';
+import { View, StyleSheet } from 'react-native';
+import { TextField } from 'react-native-material-textfield';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import {
-    View, 
-    StyleSheet
-} from 'react-native';
-import {
-    TextField
-} from 'react-native-material-textfield';
 
-export default class PasswordInputText extends React.Component {
+export default class PasswordInputText extends React.PureComponent {
 
     constructor(props) {
         super(props);
@@ -35,20 +30,32 @@ export default class PasswordInputText extends React.Component {
 
         // set new state value
         this.setState(newState)
-
     };
 
-
     render() {
+        const { 
+            state: { icEye, password }, 
+            props: { containerStyle, labelStyle, label, iconStyle, iconSize, iconColor, underlineWidth, underlineActiveWidth, inputColor, textColor } 
+        } = this;
+
         return (
-            <View>
-                <TextField {...this.props}
-                           secureTextEntry={this.state.password}/>
-                <Icon style={styles.icon}
-                      name={this.state.icEye}
-                      size={this.props.iconSize}
-                      color={this.props.iconColor}
-                      onPress={this.changePwdType}
+            <View style={[styles.container, containerStyle && containerStyle]}>
+                <TextField 
+                    {...this.props}
+                    style={labelStyle && labelStyle}
+                    secureTextEntry={password}
+                    label={label}
+                    lineWidth={underlineWidth}
+                    activeLineWidth={underlineActiveWidth}
+                    tintColor={inputColor}
+                    textColor={textColor}
+                />
+                <Icon 
+                    style={[styles.icon, iconStyle && iconStyle]}
+                    name={icEye}
+                    size={iconSize}
+                    color={iconColor}
+                    onPress={this.changePwdType}
                 />
             </View>
         );
@@ -57,17 +64,22 @@ export default class PasswordInputText extends React.Component {
 
 
 export const styles = StyleSheet.create({
-
     icon: {
         position: 'absolute',
         top: 33,
         right: 0
+    }, 
+    container: {
+        width: '100%'
     }
-
 });
 
 PasswordInputText.defaultProps = {
-iconSize:25,
-label: 'Password',
+    iconSize: 25,
+    label: "Password",
+    underlineWidth: 1,
+    underlineActiveWidth: 2,
+    inputColor: "rgb(0, 145, 234)",
+    textColor: "rgb(0, 145, 234)"
 }
-    
+
