@@ -1,6 +1,6 @@
 {
   "name": "react-native-hide-show-password-input",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "React-Native Component For Password Show/Hide",
   "main": "index.js",
   "repository": {
@@ -14,8 +14,9 @@
   },
   "homepage": "https://github.com/vishaljadav24/react-native-hide-show-password-input#readme",
   "dependencies": {
-    "react-native-material-textfield": "^0.8.4",
-    "react-native-vector-icons": "^4.3.0"
+    "react-native-material-textfield": "^0.12.0",
+    "react-native-vector-icons": "^6.4.2",
+    "prop-types": "^15.7.2"
   },
   "peerDependencies": {
     "react": "*",
@@ -23,6 +24,6 @@
   },
   "devDependencies": {
     "babel-preset-react-native": "4.0.0",
-    "react-test-renderer": "16.0.0-alpha.12"
+    "react-test-renderer": "16.8.3"
   }
 }
