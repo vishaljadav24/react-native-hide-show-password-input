@@ -64,3 +64,5 @@ export default class App extends Component {
   }
 }
 ```
+
+Note: You can use properties of [react-native-material-textfield](https://github.com/n4kz/react-native-material-textfield) and [TextInput](https://facebook.github.io/react-native/docs/textinput).
