@@ -19,6 +19,12 @@ Or with YARN
 yarn install react-native-hide-show-password-input
 ```
 
+Link vector icons library
+
+```sh
+react-native link react-native-vector-icons
+```
+
 # How to use.
 
 Very simple to use just add this component in your file.
@@ -28,22 +34,33 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 import PasswordInputText from 'react-native-hide-show-password-input';
 
-
-// use in your class
 export default class App extends Component {
-    state = {
-        password: '',
-    };
 
-    render() {
-        return (
-            <View style={{margin: 20}}>
-                <PasswordInputText
-                    value={this.state.password}
-                    onChangeText={ (password) => this.setState({ password }) }
-                />
-            </View>
-        );
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      password: '',
+    };
+  }
+  
+  render() {
+    const { password } = this.state;
+    
+    return (
+      <View style={{ margin: 20 }}>
+
+        <PasswordInputText
+          getRef={input => this.input = input}
+          value={password}
+          onChangeText={(password) => this.setState({ password })}
+        />
+
+        <Button
+          title="Clear"
+          onPress={() => this.input.clear()} />
+          
+      </View>
+    );
+  }
 }
 ```
