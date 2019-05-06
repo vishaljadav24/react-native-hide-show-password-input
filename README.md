@@ -65,4 +65,14 @@ export default class App extends Component {
 }
 ```
 
+## Properties
+
+ name                  | description                                 | type     | default
+:--------------------- |:------------------------------------------- | --------:|:------------------
+ iconSize              | Eye icon size                               |   Number | 25
+ iconColor             | Eye icon color                              |   String | #222222
+ label                 | Text Input animate label                    |   String | Password
+ getRef                | Reference callback                          | Function | -
+ 
+
 Note: You can use properties of [react-native-material-textfield](https://github.com/n4kz/react-native-material-textfield) and [TextInput](https://facebook.github.io/react-native/docs/textinput).
