@@ -16,7 +16,7 @@ npm install react-native-hide-show-password-input --save
 Or with YARN
 
 ```sh
-yarn install react-native-hide-show-password-input
+yarn add react-native-hide-show-password-input
 ```
 
 Link vector icons library
